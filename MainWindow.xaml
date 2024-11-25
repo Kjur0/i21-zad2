@@ -9,7 +9,7 @@
     <Grid>
         <DataGrid Name="AnimalDataGrid" AutoGenerateColumns="False"
                   CanUserAddRows="True" CanUserDeleteRows="True"
-                  Margin="10"
+                  Margin="10 10 10 45"
                   IsReadOnly="False"
                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <DataGrid.Columns>
