@@ -1,0 +1,29 @@
+﻿<Window x:Class="i21_zad2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:i21_zad2"
+        mc:Ignorable="d"
+        Title="Zwierzęta i ich miłośnicy" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="AnimalDataGrid" AutoGenerateColumns="False"
+                  CanUserAddRows="True" CanUserDeleteRows="True"
+                  Margin="10"
+                  IsReadOnly="False"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                  KeyDown="DataGrid_KeyDown" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Gatunek" Binding="{Binding Gatunek}" SortMemberPath="Gatunek"/>
+                <DataGridTextColumn Header="Rodzaj Szkoły" Binding="{Binding RodzajSzkoły}" SortMemberPath="RodzajSzkoły"/>
+                <DataGridTextColumn Header="Szkoła" Binding="{Binding Szkoła}" SortMemberPath="Szkoła"/>
+                <DataGridTextColumn Header="Klasa" Binding="{Binding Klasa}" SortMemberPath="Klasa"/>
+                <DataGridTextColumn Header="Ilość Miłośników" Binding="{Binding IlośćMiłośników}" SortMemberPath="IlośćMiłośników"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Dodaj nowy rekord"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="150" Height="30" Margin="10"
+                Click="AddNewRecord"/>
+    </Grid>
+</Window>
