@@ -34,15 +34,6 @@ namespace i21_zad2
             AnimalRecords.Add(new AnimalRecord("Kot", "Liceum", "LXXX LO", "3LA", 50));
         }
 
-        private void DataGrid_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Delete)
-            {
-                var selectedItem = AnimalDataGrid.SelectedItem as AnimalRecord;
-                if (selectedItem != null) AnimalRecords.Remove(selectedItem);
-            }
-        }
-
         private void AddNewRecord(object sender, RoutedEventArgs e)
         {
             AnimalRecords.Add(new AnimalRecord());

@@ -11,8 +11,7 @@
                   CanUserAddRows="True" CanUserDeleteRows="True"
                   Margin="10"
                   IsReadOnly="False"
-                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                  KeyDown="DataGrid_KeyDown" >
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Gatunek" Binding="{Binding Gatunek}" SortMemberPath="Gatunek"/>
                 <DataGridTextColumn Header="Rodzaj Szkoły" Binding="{Binding RodzajSzkoły}" SortMemberPath="RodzajSzkoły"/>
@@ -22,8 +21,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Dodaj nowy rekord"
-                HorizontalAlignment="Center" VerticalAlignment="Center"
-                Width="150" Height="30" Margin="10"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                Width="150" Height="30" Margin="0 0 0 5"
                 Click="AddNewRecord"/>
     </Grid>
 </Window>
